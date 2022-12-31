@@ -47,7 +47,7 @@ const Navbar : FunctionComponent = () => {
       </nav>
 
       {/* Mobile nav */}
-      <div className={toggle ? clsx("fixed", "left-0", "top-0", "h-screen", "w-full", "bg-black/70", "md:hidden" ): clsx("left-0", "top-0", "h-screen", "w-full")}>
+      <div className={toggle ? clsx("fixed", "left-0", "top-0", "h-screen", "w-full", "bg-black/70", "md:hidden" ): ""}>
         <div className={toggle ? 
           clsx("fixed", "left-0", "top-0", "w-[60%]", "h-screen", "ease-in duration-500","bg-zinc-200", "p-10", "flex", "flex-col", "items-center",
           "md:hidden" ) : 
