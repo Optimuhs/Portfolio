@@ -1,16 +1,19 @@
+import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import clsx from "clsx";
 import { FunctionComponent } from "react";
-const Contact:FunctionComponent = () => {
 
+const Contact:FunctionComponent = () => {
     return(
-        <section className={clsx("m-[20px]", "flex", "flex-col", "content-center","items-center")}>
-            <p>Build with me!</p>
-           <div className={clsx("space-x-4")}>
-                <FontAwesomeIcon icon={['fab','github']} size="2x" className={clsx("cursor-auto")}/>
-                <FontAwesomeIcon icon={['fab','twitter']} size="2x" />
-           </div>
-        </section>
+            <section className={clsx("m-[20px]", "flex", "flex-col", "content-center","items-center")}>
+                <div className={clsx("flex", "flex-row", "space-x-5")}>        
+                    <p><FontAwesomeIcon icon={faTwitter} className={"fa-2x"}/></p>
+                    <p><FontAwesomeIcon icon={faGithub} className={"fa-2x"}/></p>    
+                </div>
+
+                
+            
+            </section>
     )
 }
 
