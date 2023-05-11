@@ -7,6 +7,13 @@ module.exports = {
     
   ],
   theme: {
+    extend: {
+      colors: {
+        deepGreen: '#046c4e',
+        darkBlue: '#1a1a2e',
+        mustard: '#ffc857',
+      },
+    },
     screens: {
       sm: "640px",
       md: "641px",
@@ -14,7 +21,7 @@ module.exports = {
       xl: "1280px",
       "2xl": "1538px",
     },
-    extend: {},
+
   },
   plugins: [],
 }

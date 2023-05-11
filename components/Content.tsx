@@ -5,11 +5,11 @@ import Contact from "./Contact";
 import Work from "./Work";
 const Content: FunctionComponent= () => {
     return(
-        <div className={clsx("flex", "flex-col", "justify-center", "items-center", "content-center" )} >
+        <div className={clsx("flex", "flex-col", "justify-center", "items-center", "content-center","bg-stone-100" )} >
             
-            <div className={clsx("border-[2px] border-l-amber-900",
+            <div className={clsx(
                 "lg:content-center", "justify-center",
-                "lg:w-[75%]"
+                "lg:w-[75%]", "m-9"
             )}>
                 <AboutMe/>
                 <Work/>

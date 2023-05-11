@@ -1,4 +1,4 @@
-import { clsx } from 'clsx'
+import clsx from 'clsx'
 import { FunctionComponent } from 'react'
 import ReactLoading from 'react-loading'
 

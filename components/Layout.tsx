@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { FunctionComponent } from "react";
 import Content from "./Content";
-import Navbar from "./Navbar";
+import { Navbar } from "./Navbar";
 
 const Layout: FunctionComponent = () => {
     return (
