@@ -15,9 +15,9 @@ const Work: FunctionComponent = () => {
 
             <div className={clsx("flex", "flex-col", "justify-center", "content-center", "text-stone-100")} >
                 
-                <Card props={{projectName:"Web3 DApp", projectDescription:projectDescription1}}/>
-                <Card props={{projectName:"CS Stickers", projectDescription:projectDescription2}}/>
-                <Card props={{projectName:"EmailParser",  projectDescription:projectDescription3}}/>
+                <Card props={{projectName:"Web3 DApp", projectDescription:projectDescription1, imagePath: "/static/dApp_SS.png"}}/>
+                <Card props={{projectName:"CS Stickers", projectDescription:projectDescription2,imagePath: "/#"}}/>
+                <Card props={{projectName:"EmailParser",  projectDescription:projectDescription3, imagePath: "/#"}}/>
                 
             </div>
             

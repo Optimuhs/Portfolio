@@ -11,7 +11,7 @@ const Card: FunctionComponent = ({props}) => {
                     {props.projectDescription}
                 </p> 
                 <span className={clsx("my-5", "flex", "flex-col", "align-center", "justify-center")}>
-                    <Image src={"/static/dApp_SS.png"} alt="Project screenshot" width={500} height={400}></Image>
+                    <Image src={`${props.imagePath}`} alt="Project screenshot, will be updated with actual image" width={500} height={400}></Image>
                 </span>
                
             </div>
