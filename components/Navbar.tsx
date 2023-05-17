@@ -3,6 +3,7 @@ import clsx from "clsx";
 import { FunctionComponent, useState } from "react";
 import { Link } from "react-scroll";
 import { LinkComp } from "./LinkComp";
+
 export const Navbar: FunctionComponent = () => {
   const [toggle, setToggle] = useState(false);
 

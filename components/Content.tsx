@@ -2,8 +2,8 @@ import clsx from "clsx";
 import { FunctionComponent } from "react";
 import AboutMe from "./About";
 import Contact from "./Contact";
-import Work from "./Work";
-const Content: FunctionComponent= () => {
+import { Work } from "./Work";
+export const Content: FunctionComponent= () => {
     return(
         <div className={clsx("flex", "flex-col", "justify-center", "items-center", "content-center","bg-stone-100" )} >
             
@@ -19,4 +19,3 @@ const Content: FunctionComponent= () => {
     )
 }
 
-export default Content;

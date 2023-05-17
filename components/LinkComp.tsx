@@ -1,10 +1,12 @@
 import clsx from 'clsx'
-import { FunctionComponent, PropsWithChildren } from 'react'
+import { FunctionComponent, PropsWithChildren, ReactNode } from 'react'
 import { Link } from 'react-scroll'
 
 interface Props {
-  href: string // I prefer defining my routes in an enum and using that enum here
+  href: string
   position: number
+  children: ReactNode
+
 }
 
 export const LinkComp: FunctionComponent<PropsWithChildren<Props>> = ({ href, position, children }) => {
@@ -29,8 +31,8 @@ export const LinkComp: FunctionComponent<PropsWithChildren<Props>> = ({ href, po
           'hover:scale-x-100'
         )}
       />
-    
-      
+
+      {children}
         
           <span className={clsx(
             "relative", "before:content-['']", "before:absolute", "before:block", 
@@ -38,7 +40,7 @@ export const LinkComp: FunctionComponent<PropsWithChildren<Props>> = ({ href, po
             "before:left-0", "md:before:bg-stone-100", "before:bg-emerald-600", "before:hover:scale-x-100", "before:scale-x-0",
             "before:origin-top-left", "before:transition", "before:ease-in-out", "before:duration-300"
           )}>
-            {children}
+            
           </span>
        
 
