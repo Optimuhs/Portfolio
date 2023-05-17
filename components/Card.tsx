@@ -1,18 +1,19 @@
 import clsx from "clsx";
 import Image from "next/image";
 import { FunctionComponent } from "react";
-const Card: FunctionComponent = ({props}) => {
+const Card: FunctionComponent = (props) => {
+    console.log(props, "prop")
     return(
         <div className={clsx( "min-h-[450px]", "w-full",  "bg-emerald-600" , "my-5"
         )}>
-            <h3 className={clsx( "text-xl", "px-6", "pt-5")}>{props.projectName}</h3>
+            <h3 className={clsx( "text-xl", "px-6", "pt-5")}>{props.props.projectName}</h3>
             <div className={clsx( "flex", "flex-col", "justify-center", "items-center")}>    
                 <p className={clsx('text-justify','p-8', "md:w-4/5")}>
-                    {props.projectDescription}
+                    {props.props.projectDescription}
                 </p> 
                 <span className={clsx("my-5", "flex", "flex-col", "align-center", "justify-center")}>
-                   { props.imagePath && 
-                   <Image src={`${props.imagePath}`} alt="Project screenshot" width={500} height={400}></Image> 
+                   { props.props.imagePath && 
+                   <Image src={`${props.props.imagePath}`} alt="Project screenshot" width={500} height={400}></Image> 
                    
                    }
                 </span>
