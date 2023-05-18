@@ -8,10 +8,16 @@ export const Navbar: FunctionComponent = () => {
   const [toggle, setToggle] = useState(false);
 
   const toggleNav = () => {
-    setToggle(!toggle);
+      setToggle(!toggle);
   };
 
-  const getMenuLinks = () => (
+  const handleLinkClick = () => {
+    if (toggle) {
+      toggleNav(); // Close the mobile sidebar after link click
+    }
+  };
+
+  const getMenuLinks = (about:number, work:number, contact:number) => (
     <ul
       className={clsx(
         "flex-col",
@@ -21,13 +27,13 @@ export const Navbar: FunctionComponent = () => {
         "lg:flex-row"
       )}
     >
-      <LinkComp href="#About" position={-500}>
+      <LinkComp href="#About" position={about} onStateChange={handleLinkClick}>
         About Me
       </LinkComp>
-      <LinkComp href="#Work" position={-150}>
+      <LinkComp href="#Work" position={work} onStateChange={handleLinkClick}>
         My Work
       </LinkComp>
-      <LinkComp href="#Contact" position={1900}>
+      <LinkComp href="#Contact" position={contact} onStateChange={handleLinkClick}>
         Contact Me
       </LinkComp>
     </ul>
@@ -91,7 +97,7 @@ export const Navbar: FunctionComponent = () => {
         </div>
 
         <div className={clsx("flex", "sm:flex-col", "hidden", "md:inline-block")}>
-          {getMenuLinks()}
+          {getMenuLinks(-120,-120,1900)}
         </div>
       </nav>
 
@@ -109,14 +115,7 @@ export const Navbar: FunctionComponent = () => {
           <div className={clsx("flex", "sm:flex-col", "my-10",
             "md:inline-block"
             )}>
-              <ul className={clsx(
-                  "flex-col", "p-[25px]", "space-y-10",
-                  "lg:ml-auto", "lg:flex", "lg:flex-row")}>
-                  <LinkComp href="#About" position={0}>About Me</LinkComp>
-                  <LinkComp href="#Work" position={0}>My Work</LinkComp>
-                  <LinkComp href="#Contact" position={2000}>Contact Me</LinkComp>
-
-              </ul>
+              {getMenuLinks(0,0,2000)}
           </div>
         </div>
       </div>
