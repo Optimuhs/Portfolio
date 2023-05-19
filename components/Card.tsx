@@ -16,7 +16,7 @@ export const Card: FunctionComponent<CardProps> = ({
     
 
     return(
-        <div className={clsx( "min-h-[450px]", "w-full",  "bg-emerald-600" , "my-5"
+        <div className={clsx( "min-h-[450px]", "w-full",  "bg-darkGrey" , "my-5"
         )}>
             <h3 className={clsx( "text-xl", "px-6", "pt-5")}>{projectName}</h3>
             <div className={clsx( "flex", "flex-col", "justify-center", "items-center")}>    

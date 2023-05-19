@@ -12,6 +12,8 @@ module.exports = {
         deepGreen: '#046c4e',
         darkBlue: '#1a1a2e',
         mustard: '#ffc857',
+        darkGrey: '#323232',
+        beige: '#DDD0C8'
       },
     },
     screens: {

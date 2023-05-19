@@ -47,7 +47,7 @@ export const Navbar: FunctionComponent = () => {
           "flex-row",
           "items-center",
           "h-[120px]",
-          "bg-emerald-900",
+          "bg-darkGrey",
           "text-stone-100",
           "sm:fixed",
           "sm:w-screen",
@@ -104,11 +104,11 @@ export const Navbar: FunctionComponent = () => {
           {/* Mobile nav */}
       <div className={toggle ? clsx("fixed", "left-0", "top-0", "h-screen", "w-full", "bg-black/70", "md:hidden" ): ""}>
         <div className={toggle ? 
-          clsx("fixed", "left-0", "top-0", "w-[60%]", "h-screen", "ease-in duration-500","bg-zinc-200", "p-10", "flex", "flex-col", "items-center",
+          clsx("fixed", "left-0", "top-0", "w-[60%]", "h-screen", "ease-in duration-500","bg-beige", "p-10", "flex", "flex-col", "items-center",
           "md:hidden" ) : 
-          clsx("fixed", "left-[-100%]", "top-0", "h-screen", "ease-in duration-500","bg-zinc-200", "p-10", "flex", "flex-col", "items-center",
+          clsx("fixed", "left-[-100%]", "top-0", "h-screen", "ease-in duration-500","bg-beige", "p-10", "flex", "flex-col", "items-center",
           "md:hidden" )}>
-          <div className={clsx("rounded-full", "shadow-lg", "shadow-gray-400", "p-3", "cursor-pointer", "md:hidden")}
+          <div className={clsx("rounded-full", "shadow-lg", "bg-beige", "p-3", "cursor-pointer", "md:hidden")}
             onClick={toggleNav}>
             <XIcon className={clsx("w-10", "ml-auto")}/>
           </div>

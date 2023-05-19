@@ -7,8 +7,8 @@ const AboutMe: FunctionComponent = () => {
         )} >
             {/* <img alt="Image of me"></img> */}
             <div>
-            <h2 className={clsx("text-2xl", "font-medium" ,"bg-emerald-600", "px-5", "py-3")}>Who am I?</h2><br/>
-            <p className={clsx("text-justify","bg-emerald-600", "p-8")} id={"About"}>
+            <h2 className={clsx("text-2xl", "font-medium" ,"bg-darkGrey", "px-5", "py-3")}>Who am I?</h2><br/>
+            <p className={clsx("text-justify","bg-darkGrey", "p-8")} id={"About"}>
                 I am <strong>Francisco Martinez</strong>, a self-taught junior web developer 
                 with a passion for creating beautiful, functional websites, and applications. I started 
                 learning to code in my spare time and quickly became hooked on the challenge of building
