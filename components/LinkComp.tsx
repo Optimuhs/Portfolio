@@ -7,11 +7,12 @@ interface Props {
   position: number
   onStateChange: () => void
   children: ReactNode
+
  
 }
 
 
-export const LinkComp: FunctionComponent<PropsWithChildren<Props>> = ({ href, position, onStateChange, children }) => {
+export const LinkComp: FunctionComponent<PropsWithChildren<Props>> = ({ href, position, onStateChange,  children }) => {
 
   const handleState = () => {
     onStateChange()
@@ -30,7 +31,7 @@ export const LinkComp: FunctionComponent<PropsWithChildren<Props>> = ({ href, po
           'origin-top-left',
           'scale-x-0',
           'md:bg-stone-100',
-          'bg-emerald-600',
+          'bg-darkGrey',
           'transition',
           'duration-300',
           'ease-in-out',
@@ -43,7 +44,7 @@ export const LinkComp: FunctionComponent<PropsWithChildren<Props>> = ({ href, po
           <span className={clsx(
             "relative", "before:content-['']", "before:absolute", "before:block", 
             "before:w-full", "before:h-[2px]", "before:bottom-0",
-            "before:left-0", "md:before:bg-stone-100", "before:bg-emerald-600", "before:hover:scale-x-100", "before:scale-x-0",
+            "before:left-0", "md:before:bg-stone-100", "before:bg-darkGrey", "before:hover:scale-x-100", "before:scale-x-0",
             "before:origin-top-left", "before:transition", "before:ease-in-out", "before:duration-300"
           )}>         
           </span>

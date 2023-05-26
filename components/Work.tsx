@@ -18,16 +18,19 @@ export const Work: FunctionComponent = () => {
           projectName="Web3 DApp"
           projectDescription={projectDescription1}
           imagePath="/static/dApp_SS.png"
+          webLink="https://web3dapp-git-master-franciscoj14m-gmailcom.vercel.app/"
         />
         <Card
           projectName="CS Stickers"
           projectDescription={projectDescription2}
           imagePath=""
+          webLink="#"
         />
         <Card
           projectName="EmailParser"
           projectDescription={projectDescription3}
           imagePath=""
+          webLink="#"
         />
       </div>
     </section>

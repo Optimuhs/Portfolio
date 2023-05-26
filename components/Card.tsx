@@ -6,12 +6,14 @@ interface CardProps {
     projectDescription : string;
     projectName: string;
     imagePath: string;
+    webLink:string
 }
 
 export const Card: FunctionComponent<CardProps> = ({
     projectName,
     projectDescription,
     imagePath,
+    webLink
   }) => {
     
 
@@ -25,7 +27,7 @@ export const Card: FunctionComponent<CardProps> = ({
                 </p> 
                 <span className={clsx("my-5", "flex", "flex-col", "align-center", "justify-center")}>
                    {imagePath && 
-                   <Image src={imagePath} alt="Project screenshot" width={500} height={400}></Image> 
+                   <a href={webLink}><Image src={imagePath} alt="Project screenshot" width={500} height={400}></Image> </a>
                    
                    }
                 </span>
