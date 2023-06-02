@@ -19,7 +19,7 @@ export const LinkComp: FunctionComponent<PropsWithChildren<Props>> = ({ href, po
   }
   return (
     <Link activeClass="active" to={href} spy={true} smooth={true} duration={500} offset={position}>
-    <li className={clsx('p-[10px]', "cursor-pointer")}  onClick={handleState} >
+    <li className={clsx( "cursor-pointer", "py-5","md:py-2", "lg:mr-[100px]")}  onClick={handleState} >
       <div
         className={clsx(
           'absolute',
@@ -35,7 +35,8 @@ export const LinkComp: FunctionComponent<PropsWithChildren<Props>> = ({ href, po
           'transition',
           'duration-300',
           'ease-in-out',
-          'hover:scale-x-100'
+          'hover:scale-x-100',
+          
         )}
       />
 
