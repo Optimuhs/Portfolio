@@ -21,17 +21,28 @@ export const Navbar: FunctionComponent = () => {
     <ul
       className={clsx(
         "flex-col",
-        "p-[25px]",
+        "sm:content-center",
+        "sm:items-center",
+        "sm:justify-center",
+
+        "md:items-center",
+        "md:justify-center",
+        "md:text-lg",
+
+        "lg:h-fill",
         "lg:ml-auto",
         "lg:flex",
-        "lg:flex-row"
+        "lg:flex-row",
+
+        "text-left",
+        "mt-4"
       )}
     >
       <LinkComp href="#About" position={about} onStateChange={handleLinkClick}>
         About Me
       </LinkComp>
       <LinkComp href="#Work" position={work} onStateChange={handleLinkClick}>
-        My Work
+        Projects
       </LinkComp>
       <LinkComp href="#Contact" position={contact} onStateChange={handleLinkClick}>
         Contact Me
@@ -40,64 +51,82 @@ export const Navbar: FunctionComponent = () => {
   );
 
   return (
-    <div>
+    <div className={clsx("flex", "flex-col")}>
       <nav
         className={clsx(
           "flex",
-          "flex-row",
-          "items-center",
-          "h-[120px]",
+          
           "bg-darkGrey",
           "text-stone-100",
+          "p-5",
+
           "sm:fixed",
           "sm:w-screen",
-          "sm:flex-col",
+          "sm:flex-row",
+          "sm:h-[120px]",
+          "sm:items-center",
+          "sm:justify-center",
+
           "md:flex-col",
           "md:w-[160px]",
           "md:h-screen",
           "md:content-center",
           "md:justify-center",
-          "lg:flex-row",
+
           "lg:w-full",
-          "lg:justify-items-center",
-          "lg:h-[120px]"
+          "lg:items-start",
+          "lg:justify-items-start",
+          "lg:h-[225px]",
+          "lg:pt-10",
+          "lg:pb-3",
+          "lg:px-[90px]",
         )}
       >
-        <Link activeClass="active" to={"#About"} spy={true} smooth={true} duration={500} offset={-150}>
-        <h1
-          className={clsx(
-            "p-[10px]",
-            "mx-5",
-            "text-2xl",
-            "lg:ml-6",
-            "lg:content-center",
-            "lg:text-4xl",
-            "lg:inline-block"
-          )}
-        >
-          Optimuhs
-        </h1>
-        </Link>
+        <div className={clsx("flex", "flex-col", 'sm:justify-center', "sm:items-center", "md:justify-center", "md:items-center","lg:items-start")}>
+
+            <Link activeClass="active" to={"#About"} spy={true} smooth={true} duration={500} offset={-300}>  
+              <h1
+                className={clsx(
+                  "text-3xl",
+                  "md:pb-5",
+
+                  "lg:content-center",
+                  "lg:text-5xl",
+                  "lg:inline-block",
+                  "py-3"
+                )}
+              >
+                Optimuhs
+              </h1>
+            </Link>
+            
+            <h3 className={clsx(
+              "font-thin",  "text-lg", "lg:pb-7", "md:text-center"
+            )}>&#60;&#8725;Junior Developer&#62;</h3>
+        </div>
+       
         <div
           className={clsx(
-            "rounded-full",
-            "shadow-lg",
-            "shadow-black-500",
             "p-3",
             "ml-auto",
             "mr-5",
             "cursor-pointer",
+            "flex",
+            "flex-col",
+            "justify-center",
+            "items-center",
+          
             "md:hidden"
           )}
           onClick={toggleNav}
         >
           <MenuIcon
-            className={clsx("w-10", "z-50", "ml-auto", "md:hidden")}
+            className={clsx("w-10", "z-50", "ml-auto","md:hidden")}
           />
         </div>
 
-        <div className={clsx("flex", "sm:flex-col", "hidden", "md:inline-block")}>
-          {getMenuLinks(-120,-120,1900)}
+        <div className={clsx("flex", "sm:flex-col", "hidden", "md:inline-block", "text-left")}>
+          {getMenuLinks(-300,-230,1900)}
         </div>
       </nav>
 
@@ -112,7 +141,7 @@ export const Navbar: FunctionComponent = () => {
             onClick={toggleNav}>
             <XIcon className={clsx("w-10", "ml-auto")}/>
           </div>
-          <div className={clsx("flex", "sm:flex-col", "my-10",
+          <div className={clsx("flex", "sm:flex-col", "my-10", "text-2xl",
             "md:inline-block"
             )}>
               {getMenuLinks(0,0,2000)}
