@@ -4,6 +4,7 @@ import { FunctionComponent } from "react";
 
 interface CardProps {
     projectDescription : string;
+    projectTools: string;
     projectName: string;
     imagePath: string;
     webLink:string
@@ -12,27 +13,32 @@ interface CardProps {
 export const Card: FunctionComponent<CardProps> = ({
     projectName,
     projectDescription,
+    projectTools,
     imagePath,
     webLink
   }) => {
     
 
     return(
-        <div className={clsx( "min-h-[450px]", "w-full",  "bg-darkGrey" , "my-5"
+        <div className={clsx( "min-h-[300px]", "w-full" , "my-5", "text-darkGrey", "flex", "flex-col", "md:flex-row", "justify-center", "items-center"
         )}>
-            <h3 className={clsx( "text-xl", "px-6", "pt-5")}>{projectName}</h3>
-            <div className={clsx( "flex", "flex-col", "justify-center", "items-center")}>    
-                <p className={clsx('text-justify','p-8', "md:w-4/5")}>
-                    {projectDescription}
-                </p> 
-                <span className={clsx("my-5", "flex", "flex-col", "align-center", "justify-center")}>
+             <span className={clsx("flex", "flex-col", "my-5", "items-center", "justify-center", "h-fill", "w-fill" )}>
                    {imagePath && 
-                   <a href={webLink}><Image src={imagePath} alt="Project screenshot" width={500} height={400}></Image> </a>
+                   <a href={webLink}><Image src={imagePath} alt="Project screenshot" width={500} height={300}></Image> </a>
                    
                    }
-                </span>
-               
+            </span>
+            <div className={clsx( "flex", "flex-col", "w-11/12", 'p-5')}>
+                <h3 className={clsx( "text-xl", "pb-5")}>{projectName}</h3>
+                <div >    
+                    <p className={clsx('text-justify')}>
+                        {projectDescription}
+                    </p> 
+                    <br/>
+                    <p>{projectTools}</p>
+                </div>
             </div>
+            
         </div>
     );
 }
