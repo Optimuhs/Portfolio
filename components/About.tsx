@@ -8,7 +8,7 @@ const AboutMe: FunctionComponent = () => {
         )} >
             {/* <img alt="Image of me"></img> */}
             <div>
-            <h2 className={clsx("text-3xl", "font-medium" )}>Hi, I&#39;m Francisco Martinez!</h2><br/>
+            <h2 className={clsx("text-3xl", "font-medium", "underline" )}>Hi, I&#39;m Francisco Martinez!</h2><br/>
             <p className={clsx("text-left",)} id={"About"}>
                 I&#39;m a self-taught Junior Developer
                 with a passion for creating beautiful, functional websites, and applications.

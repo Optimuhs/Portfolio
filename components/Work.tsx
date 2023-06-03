@@ -8,7 +8,7 @@ export const Work: FunctionComponent = () => {
     <section className={clsx("py-6", "px-5", "md:px-0")}>
       <a id="#Work"></a>
       <div>
-        <h2 className={clsx("text-4xl", "text-darkGrey", "py-3", )}>
+        <h2 className={clsx("text-4xl", "text-darkGrey", "py-3", "underline" )}>
           Projects
         </h2>
       </div>
