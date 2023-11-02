@@ -19,7 +19,7 @@ export const Work: FunctionComponent = () => {
           projectDescription={projectDescription4}
           projectTools={project4Tools}
           imagePath="/static/Library_SS.png"
-          webLink="#"
+          webLink="https://github.com/Optimuhs/library-ai"
         />
         <Card
           projectName="Web3 DApp"
@@ -40,7 +40,7 @@ export const Work: FunctionComponent = () => {
           projectDescription={projectDescription3}
           projectTools={project3Tools}
           imagePath=""
-          webLink="#"
+          webLink="https://gitlab.com/Optimuhs/email-parser"
         />
       </div>
     </section>
