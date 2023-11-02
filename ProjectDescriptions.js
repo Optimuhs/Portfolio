@@ -18,4 +18,12 @@ This personal project was born out of my desire to improve an inefficient and
 time-consuming task at my former job. 
 `
 
-export const project3Tools = `Python, Flask, SQLAlchemy, Postgres, and Selenium`
+export const project3Tools = `Python, Flask, SQLAlchemy, PostgreSQL, and Selenium`
+
+export const projectDescription4 = `
+This is a responsive rework of my current job's library system. This implements the Accelerated Reader 
+program into the books in order to make it easier for users to search for books on the shelf. 
+This has also streamlined the check-in/out process for individual users, as well ass implementing 
+a reservation system. 
+`
+export const project4Tools = `JavaScript, React, NextJS, TailwindCSS, PostgreSQL, HTML`

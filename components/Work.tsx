@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { FunctionComponent } from "react";
-import { project1Tools, project2Tools, project3Tools, projectDescription1, projectDescription2, projectDescription3 } from "../ProjectDescriptions";
+import { project1Tools, project2Tools, project3Tools, project4Tools, projectDescription1, projectDescription2, projectDescription3, projectDescription4 } from "../ProjectDescriptions";
 import { Card } from "./Card";
 
 export const Work: FunctionComponent = () => {
@@ -14,6 +14,13 @@ export const Work: FunctionComponent = () => {
       </div>
 
       <div className={clsx("flex", "flex-col", "justify-center", "content-center", "text-stone-100")}>
+      <Card
+          projectName="Library Rework"
+          projectDescription={projectDescription4}
+          projectTools={project4Tools}
+          imagePath="/static/Library_SS.png"
+          webLink="#"
+        />
         <Card
           projectName="Web3 DApp"
           projectDescription={projectDescription1}
